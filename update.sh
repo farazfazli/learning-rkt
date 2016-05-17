@@ -3,7 +3,7 @@ LATEST=$(curl -s https://api.github.com/repos/coreos/rkt/tags | grep -Eo '"name"
 URL="https://github.com/coreos/rkt/releases/download/$LATEST/rkt-$LATEST.tar.gz"
 if [ ! -d rkt-$LATEST ]; then
         echo Updating to rkt-$LATEST
-        wget $URL && tar -xzvf rkt-$(LATEST).tar.gz && rm rkt-$LATEST.tar.gz
+        wget $URL && tar xzvf rkt-$(LATEST).tar.gz && rm rkt-$LATEST.tar.gz
 else
         echo Already on latest version: $LATEST
 fi
@@ -13,7 +13,7 @@ URL="https://github.com/appc/acbuild/releases/download/$LATEST/acbuild.tar.gz"
 
 if [ $(cat acbuild.txt | grep $LATEST | wc -l | xargs) -lt 1 ]; then
         echo "Updating to acbuild $LATEST"
-        wget $URL && tar -xzvf acbuild && rm acbuild.tar.gz
+        wget $URL && tar xzvf acbuild && rm acbuild.tar.gz
         echo $LATEST > acbuild.txt
 else
         echo "Already on latest acbuild version: $LATEST"
