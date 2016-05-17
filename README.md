@@ -1,5 +1,7 @@
 # rkt-utils
-Utilities to make rkt deployment easy
+Utilities to make building ACIs and deploying with rkt easy
+
+## Update rkt and acbuild
 
 Downloads or updates rkt and acbuild via a simple script. 
 Stores acbuild version tag taken from GitHub in a txt file.
