@@ -7,8 +7,14 @@ Downloads or updates rkt and acbuild via a simple script.
 Stores acbuild version tag taken from GitHub in a txt file.
 Uploads rkt/acbuild to your dev/staging servers so you don't have to.
 
-Uncomment and configure SSH hostnames in `update.sh` for where to push updated rkt and acbuild.
+Uncomment and configure SSH hostnames in `update.sh` if you want to push updated rkt and acbuild, if not, you can run as-is and it will save them in your current directory.
 
 ```
-./update.sh
+# If you're just updating
+curl https://raw.githubusercontent.com/farazfazli/rkt-utils/master/update.sh | sh
+```
+
+```
+# If you're updating + pushing
+curl https://raw.githubusercontent.com/farazfazli/rkt-utils/master/update.sh --output update.sh
 ```
