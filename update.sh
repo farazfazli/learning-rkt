@@ -14,8 +14,7 @@ URL="https://github.com/appc/acbuild/releases/download/$LATEST/acbuild.tar.gz"
 
 if [ $(cat acbuild.txt | grep $LATEST | wc -l | xargs) -lt 1 ]; then
         echo "Updating to acbuild $LATEST"
-        wget $URL && tar xzvf acbuild.tar.gz && rm acbuild.tar.gz
-        echo $LATEST > acbuild.txt
+        wget $URL && tar xzvf acbuild.tar.gz && rm acbuild.tar.gz && echo $LATEST > acbuild.txt
         #scp acbuild ubuntu:acbuild
 else
         echo "Already on latest acbuild version: $LATEST"
