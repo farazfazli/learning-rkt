@@ -20,6 +20,7 @@ curl https://raw.githubusercontent.com/farazfazli/rkt-utils/master/update.sh --o
 ```
 ## Delete all pods
 
+Testing pods frequently and need to clean up your rkt list? Delete all pods with a single command.
 ```
 sudo rkt rm $(rkt list --no-legend=true | cut -c-5)
 ```
