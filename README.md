@@ -18,3 +18,8 @@ curl https://raw.githubusercontent.com/farazfazli/rkt-utils/master/update.sh | s
 # If you're updating + pushing
 curl https://raw.githubusercontent.com/farazfazli/rkt-utils/master/update.sh --output update.sh
 ```
+## Delete all pods
+
+```
+sudo rkt rm $(rkt list --no-legend=true | cut -c-5)
+```
