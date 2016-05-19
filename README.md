@@ -44,7 +44,7 @@ To interact with rkt using systemd, we will make a unit file. Read [this article
 
 Now let's make a simple one ourselves.
 
-// TOOD: Unit file example
+// TODO: Unit file example
 
 
 
