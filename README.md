@@ -1,5 +1,5 @@
 # Learning rkt
-A definitive guide to teach you everything you need about rkt.
+A definitive guide to teach you almost everything you need to know about how to best use rkt.
 
 ## What is rkt?
 
